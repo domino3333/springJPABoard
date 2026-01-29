@@ -8,20 +8,11 @@ import com.board.domain.Board;
 
 public interface BoardRepository extends JpaRepository<Board, Long>{
 
-	static List<Board> findByContentContaining(String keyword){
-		return null;
+	List<Board> findByContentContaining(String keyword);
 
-	}
+	List<Board> findByWriterContaining(String keyword);
 
-	static List<Board> findByWriterContaining(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	static List<Board> findByTitleContaining(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	List<Board> findByTitleContaining(String keyword);
 	
 	
 

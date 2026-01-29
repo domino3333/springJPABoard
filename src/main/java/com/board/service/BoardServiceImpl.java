@@ -77,11 +77,11 @@ public class BoardServiceImpl implements BoardService {
 	public List<Board> search(String searchType,String keyword) throws Exception {
 		//searchType ={content,writer,title}
 		if(searchType.equals("content")) {
-			return BoardRepository.findByContentContaining(keyword);
+			return boardRepository.findByContentContaining(keyword);
 		}else if(searchType.equals("writer")) {
-			return BoardRepository.findByWriterContaining(keyword);
-		}else {
-			return BoardRepository.findByTitleContaining(keyword);
+			return boardRepository.findByWriterContaining(keyword);
+		}else{
+			return boardRepository.findByTitleContaining(keyword);
 		}
 	}
 }
